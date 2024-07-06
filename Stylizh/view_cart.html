@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product_style.css">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-top">
+        <div class="header-bg d-none d-lg-block">
+            <div class="container">
+                <div class="row w-100 align-items-center d-flex gx-lg-2 gx-0 py-2">
+                    <div class="col-xl-3 col-lg-4">
+                        <a class="navbar-brand" href="index.html">
+                            <div class="logo"><img class="img-fluid" src="img/stylizh-high-resolution-logo-transparent.png" alt=""></div>
+                        </a>
+                    </div>
+                    <div class="col-xl-5 col-lg-5">
+                        <form class="d-flex" role="search">
+                            <input class="form-control kh-font me-2" type="search" placeholder="ស្វែងរក" aria-label="Search">
+                            <button class="btn search btn-outline-success" type="submit">ស្វែងរក</button>
+                        </form>
+                    </div>
+                    <div class="col-xl-4 col-lg-3 col-md-2 text-end">
+                        <ul class="list-inline align-items-center mb-0">
+                            <li class="list-inline-item dropdown">
+                                <a href="#" class="list-link position-relative" data-bs-toggle="dropdown"><i class="fa-solid fa-earth-americas"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">ភាសាខ្មែរ</a></li>
+                                    <li><a class="dropdown-item" href="#">អង់គ្លេស</a></li>
+                                    <li><a class="dropdown-item" href="#">ចិន</a></li>
+                                    <li><a class="dropdown-item" href="#">កូរ៉េ</a></li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item dropdown">
+                                <a href="#" class="list-link position-relative" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <button type="button" class="btn dropdown-item" data-bs-toggle="modal" data-bs-target="#signInModal">
+                                            Sign up
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn dropdown-item" data-bs-toggle="modal" data-bs-target="#logInModal">
+                                            Log in
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item dropdown favorite">
+                                <a href="#" class="list-link position-relative"><i class="fa-solid fa-heart"></i>
+                                    <span class="position-absolute start-100 translate-middle badge rounded-pill">
+                                        3
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item title">
+                                        <h4 class="dropdown-header fs-3 fw-bolder">ចំំណូលចិត្តរបស់ខ្ញុំ</h4>
+                                        <span class="text kh-font">Sign in ដើម្បីអាចរក្សាទុកនូវការ​ Saves របស់អ្នករហូតដល់ 60ថ្ងៃ</span>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="detail.html" target="_blank">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <img src="img/clothes/women/pic11.png" class="fav-img img-fluid" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <h6>រ៉ូប</h6>
+                                                    <span>$ 40.50</span>
+                                                </div>
+                                                <div class="col-1">
+                                                    <div class="btn btn-close"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="detail.html" target="_blank">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <img src="img/clothes/women/T-shirt/t-shirt10.png" class="fav-img img-fluid" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <h6>អាវយឺតនារី</h6>
+                                                    <span>$ 8.50</span>
+                                                </div>
+                                                <div class="col-1">
+                                                    <div class="btn btn-close"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="detail.html" target="_blank">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <img src="img/jewelry/photo8.png" class="fav-img img-fluid" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <h6>គ្រឿងអលង្ការ</h6>
+                                                    <span>$ 10.50</span>
+                                                </div>
+                                                <div class="col-1">
+                                                    <div class="btn btn-close"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <div class="row">
+                                            <a href="#cartModal" role="button" data-bs-toggle="modal" class="add-cart text-center">បញ្ចូលទំនិញទាំងអស់ទៅក្នុងកន្ត្រក</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-inline-item dropdown favorite">
+                                <a href="#" class="list-link position-relative"><i class="fa-solid fa-cart-shopping"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item title">
+                                        <h4 class="dropdown-header fs-3 fw-bolder">កន្ត្រករបស់ខ្ញុំ</h4>
+                                        <span class="text">Sign in ដើម្បីអាចរក្សាទុកនូវការ​ Saves របស់អ្នករហូតដល់ 60ថ្ងៃ</span>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="detail.html" target="_blank">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <img src="img/clothes/women/pic7.png" class="fav-img img-fluid" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <h6>រ៉ូប</h6>
+                                                    <span>$ 40.50</span>
+                                                    <form action="#">
+                                                        <div class="col-12">
+                                                            <div class="row align-items-center mt-2">
+                                                                <div class="col-6">
+                                                                    <label class="form-label"> ចំនួនទិញ្ : </label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="number-input">
+                                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                                        <input class="quantity form-control" min="1" name="quantity" value="2" type="number">
+                                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-1">
+                                                    <div class="btn btn-close"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="detail.html" target="_blank">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <img src="img/clothes/women/T-shirt/t-shirt1.png" class="fav-img img-fluid" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <h6>អាវយឺតនារី</h6>
+                                                    <span>$ 8.50</span>
+                                                    <form action="#">
+                                                        <div class="col-12">
+                                                            <div class="row align-items-center mt-2">
+                                                                <div class="col-6">
+                                                                    <label class="form-label"> ចំនួនទិញ្ : </label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="number-input">
+                                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                                        <input class="quantity form-control" min="1" name="quantity" value="1" type="number">
+                                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-1">
+                                                    <div class="btn btn-close"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="detail.html" target="_blank">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <img src="img/jewelry/photo2.png" class="fav-img img-fluid" alt="">
+                                                </div>
+                                                <div class="col-7">
+                                                    <h6>គ្រឿងអលង្ការ</h6>
+                                                    <span>$ 10.50</span>
+                                                    <form action="#">
+                                                        <div class="col-12">
+                                                            <div class="row align-items-center mt-2">
+                                                                <div class="col-6">
+                                                                    <label class="form-label"> ចំនួនទិញ្ : </label>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="number-input">
+                                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                                        <input class="quantity form-control" min="1" name="quantity" value="3" type="number">
+                                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="col-1">
+                                                    <div class="btn btn-close"></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <div class="col-12 d-flex justify-content-between">
+                                            <span>សរុប : </span>
+                                            <span>$ 100.50</span>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <div class="row gx-5">
+                                            <div class="col-6">
+                                                <div class="row"><a href="view_cart.html" class="add-cart text-center">មើលទំនិញទាំងអស់</a></div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="row"><a href="#payModal" role="button" data-bs-toggle="modal" class="add-cart text-center">ទិញឥឡូវនេះ</a></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="account">
+        <div class="container">
+            <div class="row">
+                <!-- Add to Favorite -->
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                    <div  class="toast" id="myToast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1500">
+                        <div class="toast-header">
+                            <img src="img/logo/stylizh-high-resolution-logo-transparent.png" style="width: 25px; height: 25px;" class="rounded me-2" alt="">
+                            <strong class="me-auto toast-title ">Stylizh</strong>
+                            <small>1 mins ago</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body text-color fs-6">
+                            ទំនិញបានបន្ថែមទៅក្នុងចំណូលចិត្ត
+                        </div>
+                    </div>
+                </div>
+                <!-- Favorite -->
+                <div class="offcanvas offcanvas-start bg-color-pink" tabindex="-1" id="offcanvasFav" aria-labelledby="offcanvasFavLabel">
+                    <div class="offcanvas-header pt-5">
+                        <h5 class="offcanvas-title fs-3 fw-bolder text-color" id="offcanvasFavLabel">ចំំណូលចិត្តរបស់ខ្ញុំ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body pe-5">
+                        <ul class="list-unstyled">
+                            <li class="item mb-4">
+                                <span class="s-text">Sign in ដើម្បីអាចរក្សាទុកនូវការ​ Saves របស់អ្នករហូតដល់ 60ថ្ងៃ</span>
+                            </li>
+                            <li class="item mb-3">
+                                <a href="detail.html" target="_blank">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="img/clothes/women/pic11.png" class="fav-img img-fluid" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h6>រ៉ូប</h6>
+                                            <span>$ 40.50</span>
+                                        </div>
+                                        <div class="col-1">
+                                            <div class="btn btn-close"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item mb-3">
+                                <a href="detail.html" target="_blank">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="img/clothes/women/T-shirt/t-shirt10.png" class="fav-img img-fluid" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h6>អាវយឺតនារី</h6>
+                                            <span>$ 8.50</span>
+                                        </div>
+                                        <div class="col-1">
+                                            <div class="btn btn-close"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item mb-5">
+                                <a href="detail.html" target="_blank">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="img/jewelry/photo8.png" class="fav-img img-fluid" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h6>គ្រឿងអលង្ការ</h6>
+                                            <span>$ 10.50</span>
+                                        </div>
+                                        <div class="col-1">
+                                            <div class="btn btn-close"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <div class="row">
+                                    <a href="#cartModal" data-bs-toggle="modal" role="button" data-bs-toggle="modal" class="add-cart text-center">បញ្ចូលទំនិញទាំងអស់ទៅក្នុងកន្ត្រក</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Cart-icon -->
+                <div class="offcanvas offcanvas-start bg-color-pink" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasCartLabel">
+                    <div class="offcanvas-header pt-5">
+                        <h5 class="offcanvas-title fs-3 fw-bolder text-color" id="offcanvasCartLabel">កន្ត្រករបស់ខ្ញុំ</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body pe-5">
+                        <ul class="list-unstyled">
+                            <li class="item mb-4">
+                                <span class="s-text">Sign in ដើម្បីអាចរក្សាទុកនូវការ​ Saves របស់អ្នករហូតដល់ 60ថ្ងៃ</span>
+                            </li>
+                            <li class="mb-3 item">
+                                <a href="detail.html" target="_blank">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="img/clothes/women/pic7.png" class="fav-img img-fluid" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h6>រ៉ូប</h6>
+                                            <span>$ 40.50</span>
+                                            <form action="#">
+                                                <div class="col-12">
+                                                    <div class="row align-items-center mt-2">
+                                                        <div class="col-6">
+                                                            <label class="form-label fw-bold text-color"> ចំនួនទិញ្ : </label>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="number-input">
+                                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                                <input class="quantity form-control" min="1" name="quantity" value="2" type="number">
+                                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-1">
+                                            <div class="btn btn-close"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-3 item">
+                                <a href="detail.html" target="_blank">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="img/clothes/women/T-shirt/t-shirt1.png" class="fav-img img-fluid" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h6>អាវយឺតនារី</h6>
+                                            <span>$ 8.50</span>
+                                            <form action="#">
+                                                <div class="col-12">
+                                                    <div class="row align-items-center mt-2">
+                                                        <div class="col-6">
+                                                            <label class="form-label fw-bold text-color"> ចំនួនទិញ្ : </label>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="number-input">
+                                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                                <input class="quantity form-control" min="1" name="quantity" value="3" type="number">
+                                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-1">
+                                            <div class="btn btn-close"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-3 item">
+                                <a href="detail.html" target="_blank">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="img/jewelry/photo2.png" class="fav-img img-fluid" alt="">
+                                        </div>
+                                        <div class="col-7">
+                                            <h6>គ្រឿងអលង្ការ</h6>
+                                            <span>$ 10.50</span>
+                                            <form action="#">
+                                                <div class="col-12">
+                                                    <div class="row align-items-center mt-2">
+                                                        <div class="col-6">
+                                                            <label class="form-label fw-bold text-color"> ចំនួនទិញ្ : </label>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="number-input">
+                                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                                <input class="quantity form-control" min="1" name="quantity" value="1" type="number">
+                                                                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-1">
+                                            <div class="btn btn-close"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-4 item">
+                                <div class="col-12 d-flex justify-content-between">
+                                    <span>សរុប : </span>
+                                    <span>$ 100.50</span>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="row gx-5">
+                                    <div class="col-6">
+                                        <div class="row"><a href="view_cart.html" class="add-cart text-center">មើលទំនិញទាំងអស់</a></div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="row"><a href="#payModal" role="button" data-bs-toggle="modal" class="add-cart text-center">ទិញឥឡូវនេះ</a></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Add to Cart -->
+                <div class="modal fade AddCartModal" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-6 border-end border-success-subtle">
+                                        <div class="row g-4">
+                                            <div class="col-12 col-lg-6">
+                                                <div class="card">
+                                                    <img src="img/clothes/women/pic16.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="row text-color ps-3 ps-lg-0">
+                                                    <span class="mb-3">សម្លៀកបំពាក់នារី</span>
+                                                    <span class="mb-2">$ 45.99</span>
+                                                    <span>ចំនួន : 1</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 border-start border-success-subtle">
+                                        <div class="row">
+                                            <div class="row ps-4 text-color">
+                                                <p>មានទំនិញ 3 នៅក្នុងកន្ត្រករបស់អ្នក</p>
+                                                <span>$ 200.99</span>
+                                            </div>
+                                            <div class="row mt-4 g-4">
+                                                <div class="col-12 col-lg-8">
+                                                    <a href="view_cart.html" role="button" class="btn add-cart">មើលទំនិញក្នុងកន្ត្រកទាំងអស់</a>
+                                                </div>
+                                                <div class="col-12 col-lg-4">
+                                                    <a href="index.html" class="btn add-cart">បន្តការទិញ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row clothes">
+                                    <div class="mb-5">
+                                        <hr size="4" color="#6A704C">
+                                        <div class="row mt-5">
+                                            <h3 class="header-title mb-2">ទំនិញស្រដៀងគ្នា</h3>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span><hr class="header-line mt-3 mb-5"></span>
+                                                <div class="position-relative">
+                                                    <div class="button-both d-flex align-items-center gap-3 ms-3">
+                                                        <div class="swiper-button-prev"><i class="fa-solid fa-left-long"></i></div>
+                                                        <div class="swiper-button-next"><i class="fa-solid fa-right-long"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row px-3">
+                                            <div class="swiper recommendSwiper swiper-initialized swiper-horizontal">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide card position-relative">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a role="button" class="btn product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#modalCart"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#modalCart"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic10.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>រ៉ូបរដូវក្ដៅ</span>
+                                                                <span>$ 14.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a role="button" class="btn product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#modalCart"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#modalCart"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic2.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>សម្លៀកបំពាក់នារី</span>
+                                                                <span>$ 20.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 25.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a role="button" class="btn product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#modalCart"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#modalCart"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic7.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>សម្លៀកបំពាក់នារី</span>
+                                                                <span>$ 14.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a role="button" class="btn product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#modalCart"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#modalCart"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic11.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>រ៉ូបសម្រាប់រដូវក្ដៅ</span>
+                                                                <span>$ 15.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 20.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a role="button" class="btn product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#modalCart"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#modalCart"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic4.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>សម្លៀកបំពាក់នារី</span>
+                                                                <span>$ 18.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a role="button" class="btn product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#modalCart"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#modalCart"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic13.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>រ៉ូបរដូវក្ដៅ</span>
+                                                                <span>$ 18.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a role="button" class="btn product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#modalCart"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#modalCart"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic15.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>សម្លៀកបំពាក់នារី</span>
+                                                                <span>$ 12.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a role="button" class="btn product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#modalCart"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#modalCart"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic8.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>រ៉ូបសម្រាប់រដូវក្ដៅ</span>
+                                                                <span>$ 13.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 18.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a role="button" class="btn product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#modalCart"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#modalCart"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic10.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>សម្លៀកបំពាក់នារី</span>
+                                                                <span>$ 13.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 18.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a role="button" class="btn product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#modalCart"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#modalCart"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic7.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>រ៉ូបរដូវក្ដៅ</span>
+                                                                <span>$ 13.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 18.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a role="button" class="btn product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#modalCart"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#modalCart"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic8.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>សម្លៀកបំពាក់នារី</span>
+                                                                <span>$ 13.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 18.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add to Cart1 -->
+                <div class="modal fade AddCartModal" id="modalCart" tabindex="-1" aria-labelledby="modalCartLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-6 border-end border-success-subtle">
+                                        <div class="row g-4">
+                                            <div class="col-12 col-lg-6">
+                                                <div class="card">
+                                                    <img src="img/clothes/women/pic16.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="row text-color ps-3 ps-lg-0">
+                                                    <span class="mb-3">សម្លៀកបំពាក់នារី</span>
+                                                    <span class="mb-2">$ 45.99</span>
+                                                    <span>ចំនួន : 1</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 border-start border-success-subtle">
+                                        <div class="row">
+                                            <div class="row ps-4 text-color">
+                                                <p>មានទំនិញ 3 នៅក្នុងកន្ត្រករបស់អ្នក</p>
+                                                <span>$ 200.99</span>
+                                            </div>
+                                            <div class="row mt-4 g-4">
+                                                <div class="col-12 col-lg-8">
+                                                    <a href="view_cart.html" role="button" class="btn add-cart">មើលទំនិញក្នុងកន្ត្រកទាំងអស់</a>
+                                                </div>
+                                                <div class="col-12 col-lg-4">
+                                                    <a href="index.html" class="btn add-cart">បន្តការទិញ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row clothes">
+                                    <div class="mb-5">
+                                        <hr size="4" color="#6A704C">
+                                        <div class="row mt-5">
+                                            <h3 class="header-title mb-2">ទំនិញស្រដៀងគ្នា</h3>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span><hr class="header-line mt-3 mb-5"></span>
+                                                <div class="position-relative">
+                                                    <div class="button-both d-flex align-items-center gap-3 ms-3">
+                                                        <div class="swiper-button-prev"><i class="fa-solid fa-left-long"></i></div>
+                                                        <div class="swiper-button-next"><i class="fa-solid fa-right-long"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row px-3">
+                                            <div class="swiper recommendSwiper swiper-initialized swiper-horizontal">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide card position-relative">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a class="product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic10.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>សម្លៀកបំពាក់នារី</span>
+                                                                <span>$ 14.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a class="product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic2.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>រ៉ូបរដូវក្ដៅ</span>
+                                                                <span>$ 20.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 25.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a class="product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic7.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>សម្លៀកបំពាក់នារី</span>
+                                                                <span>$ 14.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a class="product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic11.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>រ៉ូបសម្រាប់រដូវក្ដៅ</span>
+                                                                <span>$ 15.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 20.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a class="product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic4.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>សម្លៀកបំពាក់នារី</span>
+                                                                <span>$ 18.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a class="product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic13.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>រ៉ូបរដូវក្ដៅ</span>
+                                                                <span>$ 18.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a class="product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic15.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>សម្លៀកបំពាក់នារី</span>
+                                                                <span>$ 12.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a class="product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic8.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>រ៉ូបសម្រាប់រដូវក្ដៅ</span>
+                                                                <span>$ 13.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 18.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a class="product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic10.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>រ៉ូបរដូវក្ដៅ</span>
+                                                                <span>$ 13.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 18.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a class="product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic7.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>សម្លៀកបំពាក់នារី</span>
+                                                                <span>$ 13.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 18.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide card">
+                                                        <div class="product-hover-right">
+                                                            <ul class="product list-unstyled">
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បញ្ចូលទៅក្នុងចំណូលចិត្ត"><a class="product-link trigger-toast"><i class="fa-solid fa-heart"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="មើលលម្អិត"><a target="_blank" href="detail.html" class="product-link"><i class="fa-solid fa-eye"></i></a></li>
+                                                                <li class="product-item" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="បន្ថែមទៅក្នុងកន្ត្រក"><a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="product-link"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="product-hover-left">
+                                                            <a href="#cartModal" data-bs-toggle="modal"  role="button" data-bs-toggle="modal" class="btn">បន្ថែមទៅក្នុង <i class="fa-solid fa-cart-shopping"></i></a>
+                                                        </div>
+                                                        <div class="position-relative overflow-hidden">
+                                                            <a href="detail.html" target="_blank" class="card-img-overlay rounded-bottom-0"></a>
+                                                            <img src="img/clothes/women/pic8.png" alt="">
+                                                        </div>
+                                                        <div class="card-header">
+                                                            <div class="d-flex justify-content-between mb-2">
+                                                                <span>រ៉ូបសម្រាប់រដូវក្ដៅ</span>
+                                                                <span>$ 13.00</span>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between">
+                                                                <span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                                                <span><del>$ 18.00</del></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pay now -->
+                <div class="modal fade" id="payModal" tabindex="-1" aria-labelledby="payModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-body p-4">
+                                <h3 class="modal-title text-center" id="payModalLabel">ការបញ្ជាទិញ</h3>
+                                <hr size="2" color="#6A704C" class="my-4">
+                                <form action="#">
+                                    <div class="row mt-4">
+                                        <div class="col-6">
+                                            <div class="form-floating kh-font">
+                                                <input type="text" class="form-control" id="floatingFname" placeholder="" required>
+                                                <label for="floatingFname">នាមត្រកូល</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-floating kh-font">
+                                                <input type="text" class="form-control" id="floatingLname" placeholder="" required>
+                                                <label for="floatingLname">នាមខ្លួន</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <label for="Email" class="form-label fw-bold">Email Address : </label>
+                                            <input type="email" class="form-control en-control" id="Email" placeholder="Enter your email address" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <label for="country" class="form-label fw-bold kh-font">ប្រទេស</label>
+                                            <select class="form-select kh-font" aria-label="Default select example">
+                                                <option selected>កម្ពុជា</option>
+                                                <option value="Australia">អូស្ត្រាលី</option>
+                                                <option value="China">ចិន</option>
+                                                <option value="Korea">កូរ៉េ</option>
+                                                <option value="Japan">ជប៉ុន</option>
+                                                <option value="English">អង់គ្លេស</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="city" class="form-label fw-bold kh-font">ទីក្រុង</label>
+                                            <input type="text" class="form-control" id="city">
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="postalCode" class="form-label fw-bold">Postal Code</label>
+                                            <input type="number" class="form-control" id="postalCode">
+                                        </div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label kh-font" for="flexCheckChecked">
+                                            រក្សាព័ត៌មាននេះសម្រាប់ពេលក្រោយ
+                                        </label>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row mt-3">
+                                            <div class="col-5">
+                                                <label for="card" class="form-label fw-bold">Credit card number</label>
+                                                <input type="number" class="form-control" id="card" required>
+                                            </div>
+                                            <div class="col-7 d-flex align-items-center pt-2">
+                                                <button type="button" class="border-0">
+                                                    <img src="img/payment/amex.svg" alt="">
+                                                </button>
+                                                <button type="button" class="border-0">
+                                                    <img src="img/payment/klarna.svg" alt="">
+                                                </button>
+                                                <button type="button" class="border-0">
+                                                    <img src="img/payment/mastercard.svg" alt="">
+                                                </button>
+                                                <button type="button" class="border-0">
+                                                    <img src="img/payment/visa.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row mb-4">
+                                            <label for="expires" class="form-label fw-bold kh-font">ថ្ងៃផុតកំណត់</label>
+                                            <div class="col-5">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>2016</option>
+                                                    <option value="1">2018</option>
+                                                    <option value="2">2019</option>
+                                                    <option value="3">2020</option>
+                                                    <option value="4">2022</option>
+                                                    <option value="5">2023</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-7">
+                                                <select class="form-select" aria-label="Default select example">
+                                                    <option selected>7 - កក្កដា</option>
+                                                    <option value="1">29 - ឧសភា</option>
+                                                    <option value="2">12 - វិច្ឆិកា</option>
+                                                    <option value="3">2 - មីនា</option>
+                                                    <option value="4">20 - កញ្ញា</option>
+                                                    <option value="5">2 - តុលា</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="security" class="form-label fw-bold">Security code (on back)</label>
+                                        <input type="number" class="form-control" id="security">
+                                    </div>
+                                    <div class="row px-5">
+                                        <a href="index.html" class="pay w-100 ms-0">បង់ឥឡូវនេះ</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Signin -->
+                <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body py-4">
+                                <h3 class="modal-title text-center" id="signInModalLabel">SIGN UP</h3>
+                                <hr size="2" color="#6A704C" class="my-4">
+                                <form action="#" class="text-center">
+                                    <div class="row g-3">
+                                        <div class="col-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="" aria-label="First name" required>
+                                                <label for="floatingFname">នាមត្រកូល</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" placeholder="" aria-label="Last name" required>
+                                                <label for="floatingFname">នាមខ្លួន</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <input class="form-control" type="email" name="email" placeholder="Email" required>
+                                        <input class="form-control" type="password" name="password" placeholder="Password" required>
+                                        <input class="form-control" type="password" name="password" placeholder="Comfirm Password" required>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="form-check en-font">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                                            <label class="form-check-label kh-font" for="gridCheck">
+                                                ខ្ញុំយល់ព្រមលក្ខខណ្ឌប្រើប្រាស់ និងគោលការណ៍ឯកជនភាព
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-5 mx-auto mt-4">
+                                        <input class="form-control submit" type="submit" name="login" value="SIGN UP">
+                                    </div>
+                                    <div class="social mb-5">
+                                        <a class="icon" target="_blank" href="https://web.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+                                        <a class="icon mx-4" target="_blank" href="https://www.google.com/"><i class="fa-brands fa-google"></i></a>
+                                        <a class="icon" target="_blank" href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                                    </div>
+                                    <span>មានគណនីរួចហើយ ? <a href="#logInModal" data-bs-toggle="modal" class="sign-up">Login here</a></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- login -->
+                <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body py-4">
+                                <h3 class="modal-title text-center" id="logInModalLabel">LOGIN</h3>
+                                <hr size="2" color="#6A704C" class="my-4">
+                                <form action="#" class="text-center">
+                                    <div class="form-floating">
+                                        <input class="form-control" type="email" name="email" placeholder="" required>
+                                        <label for="emailFloating">Email</label>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input class="form-control" type="password" name="password" placeholder="" required>
+                                        <label for="emailFloating">Password</label>
+                                    </div>
+                                    <a href="#" class="password">ភ្លេចលេខសម្ងាត់ ?</a>
+                                    <div class="col-5 mx-auto mt-5">
+                                        <input class="form-control submit" type="submit" name="login" value="LOGIN">
+                                    </div>
+                                    <div class="social mb-5">
+                                        <a class="icon" target="_blank" href="https://web.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+                                        <a class="icon mx-4" target="_blank" href="https://www.google.com/"><i class="fa-brands fa-google"></i></a>
+                                        <a class="icon" target="_blank" href="https://www.twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                                    </div>
+                                    <span>មិនទាន់មានគណនី ? <a href="#signInModal" data-bs-toggle="modal" class="sign-up">Sign Up</a></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- About Us -->
+                <div class="modal fade" id="AboutUsModal" tabindex="-1" aria-labelledby="AboutUsModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body py-4">
+                                <h2 class="modal-title fs-1 fw-bolder text-center" id="AboutUsModalLabel">អំពីយើង</h2>
+                                <hr size="2" color="#6A704C" class="my-4">
+                                <div class="row px-4">
+                                    <h4 class="fs-2 fw-bolder text-color mb-3">អំពី Website</h4>
+                                    <p class="fs-5 text-color text-indent">
+                                        <span class="fs-4 text-color fw-bolder">Stylizh</span> គឺជា Website មួយដែលអាចអោយអតិថិជនធ្វើការទិញទំនិញផ្សេងៗតាមរយៈ Online បាន​ ។ ដែលនៅលើ website របស់យើងមានជាច្រើនប្រភេទទៅតាមតម្រូវការរបស់អតិថិជន ដោយរួមមាន សម្លៀកបំពាក់ ស្បែកជើង ទាំងបុរស នារី ក៏ដូចជាកូនក្មេង ព្រមទាំងមានគ្រឿង Accessories និង​គ្រឿងសង្ហារិមមួយចំនួនផងដែរ ។
+                                    </p>
+                                </div>
+                                <div class="row mt-3 px-4">
+                                    <h4 class="fs-2 fw-bolder text-color mb-3">អំពីខ្ញុំ</h4>
+                                    <p class="fs-5 text-color text-indent">
+                                        នាងខ្ញុំឈ្មោះ ជេត​ ជីវី ជានិស្សិតផ្នែកវិទ្យាសាស្ត្រកុំព្យូទ័រ នៃសាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ (RUPP) គោលបំណងក្នុងការបង្កើតគេហទំព័រមួយនេះឡើង គឺដើម្បីបង្ហាញពីស្នាដៃរបស់ខ្ញុំ ដែលបានសិក្សាវគ្គខ្លី CSS + Bootstrap នៅ ANT Technology Training Center ។ ជាពិសេស នាងខ្ញុំសូមអរគុណដល់លោកគ្រូ <span class="text-color fw-bolder">Che Sophal</span> ដែលបានផ្ដល់នូវចំណេះដឹង និងបានខិតខំបង្ហាត់បង្រៀននាងខ្ញុំយ៉ាងយកចិត្តទុកដាក់ ។
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar navbar-expand-lg z-3 mb-3 mb-lg-0">
+        <div class="container">
+            <a class="navbar-brand d-lg-none" href="index.html">
+                <div class="logo"><img class="img-fluid" src="img/stylizh-high-resolution-logo-transparent.png" alt=""></div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-md-flex justify-content-between my-3 mx-1">
+                    <form class="d-flex d-lg-none" role="search">
+                        <input class="form-control kh-font me-2" type="search" placeholder="ស្វែងរក" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">ស្វែងរក</button>
+                    </form>
+                    <ul class="list-inline align-items-center d-lg-none my-4 my-md-0">
+                        <li class="list-inline-item dropdown">
+                            <a href="#" class="list-link position-relative" data-bs-toggle="dropdown"><i class="fa-solid fa-earth-americas"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">ភាសាខ្មែរ</a></li>
+                                <li><a class="dropdown-item" href="#">អង់គ្លេស</a></li>
+                                <li><a class="dropdown-item" href="#">ចិន</a></li>
+                                <li><a class="dropdown-item" href="#">កូរ៉េ</a></li>
+                            </ul>
+                        </li>
+                        <li class="list-inline-item dropdown">
+                            <a href="#" class="list-link position-relative" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <button type="button" class="btn dropdown-item" data-bs-toggle="modal" data-bs-target="#signInModal">
+                                        Sign up
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="btn dropdown-item" data-bs-toggle="modal" data-bs-target="#logInModal">
+                                        Log in
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-inline-item dropdown favorite">
+                            <a data-bs-toggle="offcanvas" href="#offcanvasFav" role="button" aria-controls="offcanvasFav" class="list-link position-relative"><i class="fa-solid fa-heart"></i>
+                                <span class="position-absolute start-100 translate-middle badge rounded-pill">
+                                    3
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item dropdown favorite">
+                            <a data-bs-toggle="offcanvas" href="#offcanvasCart" role="button" aria-controls="offcanvasCart" class="list-link position-relative"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="navbar-nav mx-auto mb-lg-0">
+                    <li class="nav-item mb-2">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            សម្លៀកបំពាក់ 
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="men_clothes.html">សម្លៀកបំពាក់បុរស</a></li>
+                            <li><a class="dropdown-item" href="wonmen_clothes.html">សម្លៀកបំពាក់នារី</a></li>
+                            <li><a class="dropdown-item" href="kid_clothes.html">សម្លៀកបំពាក់កូនក្មេង</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ស្បែកជើង 
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="men_shoes.html">ស្បែកជើងបុរស</a></li>
+                            <li><a class="dropdown-item" href="women_shoes.html">ស្បែកជើងនារី</a></li>
+                            <li><a class="dropdown-item" href="kid_shoes.html">ស្បែកជើងកូនក្មេង</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Accessories 
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="jewelry.html">គ្រឿងអលង្ការ</a></li>
+                            <li><a class="dropdown-item" href="bag.html">កាបូប & កាតាប</a></li>
+                            <li><a class="dropdown-item" href="hat.html">មួក</a></li>
+                            <li><a class="dropdown-item" href="clock.html">នាឡិកា</a></li>
+                            <li><a class="dropdown-item" href="glasses.html">វ៉ែនតា</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="furniture.html">គ្រឿងសង្ហារិម</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promotion.html">បញ្ចុះតម្លៃ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="popular.html">ពេញនិយម</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">ទំនាក់ទំនង</a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#AboutUsModal">
+                            អំពីយើង
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="viewCart my-5">
+            <div class="container">
+                <div class="row popular mb-5">
+                    <h6 class="header-title text-center">ទំនិញក្នុងកន្ត្រកទាំងអស់</h6>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 col-12 mx-auto">
+                        <div class="table-responsive">
+                            <table class="table" id="myTable" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">ទំនិញ</th>
+                                        <th></th>
+                                        <th><p class="d-none d-md-inline-block mb-0">តម្លៃ</p></th>
+                                        <th class="text-center"><p class="d-none d-md-inline-block mb-0">ចំនួន</p></th>
+                                        <th class="text-end">សរុប</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" class="col-3 col-md-2 pro-img">
+                                            <a href="wonmen_clothes.html" class="card">
+                                                <img src="img/clothes/women/pic2.png" alt="">
+                                            </a>
+                                        </td>
+                                        <td class="describe">
+                                            <div class="card">
+                                                <a href="wonmen_clothes.html" class="header-title fs-5"><span>រ៉ូបរដូវក្ដៅ</span></a>
+                                                <span class="mt-2">ព័ណ៍ : ខៀវ</span>
+                                                <div class="d-md-none col-auto mt-2">
+                                                    <div class="number-input">
+                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                        <input class="quantity form-control" min="0" name="quantity" value="1" type="number">
+                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><p class="d-none d-md-inline-block mb-0">$ 35.99</p></td>
+                                        <td class="text-center">
+                                            <div class="d-none d-md-inline-block">
+                                                <div class="number-input">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                    <input class="quantity form-control" min="0" name="quantity" value="2" type="number">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">$ 71.88</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="col-3 col-md-2 pro-img">
+                                            <a href="kid_clothes.html" class="card">
+                                                <img src="img/clothes/kid/photo2.jpg" alt="">
+                                            </a>
+                                        </td>
+                                        <td class="describe">
+                                            <div class="card">
+                                                <a href="kid_clothes.html" class="header-title fs-5"><span>សម្លៀកបំពាក់កូនក្មេង</span></a>
+                                                <span class="mt-2">ព័ណ៍ : ចម្រុះព័ណ៍</span>
+                                                <div class="d-md-none col-auto mt-2">
+                                                    <div class="number-input">
+                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                        <input class="quantity form-control" min="0" name="quantity" value="1" type="number">
+                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><p class="d-none d-md-inline-block mb-0">$ 9.99</p></td>
+                                        <td class="text-center">
+                                            <div class="d-none d-md-inline-block">
+                                                <div class="number-input">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                    <input class="quantity form-control" min="0" name="quantity" value="1" type="number">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">$ 9.99</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="col-3 col-md-2 pro-img">
+                                            <a href="women_shoes.html" class="card">
+                                                <img src="img/shoes/women/pic4.png" alt="">
+                                            </a>
+                                        </td>
+                                        <td class="describe">
+                                            <div class="card">
+                                                <a href="women_shoes.html" class="header-title fs-5"><span>ស្បែកជើងនារី</span></a>
+                                                <span class="mt-2">ព័ណ៍ : ថ្លា</span>
+                                                <div class="d-md-none col-auto mt-2">
+                                                    <div class="number-input">
+                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                        <input class="quantity form-control" min="0" name="quantity" value="1" type="number">
+                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><p class="d-none d-md-inline-block mb-0">$ 20.00</p></td>
+                                        <td class="text-center">
+                                            <div class="d-none d-md-inline-block">
+                                                <div class="number-input">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                    <input class="quantity form-control" min="0" name="quantity" value="1" type="number">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">$ 20.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="col-3 col-md-2 pro-img">
+                                            <a href="kid_shoes.html" class="card">
+                                                <img src="img/shoes/kid/photo9.jpg" alt="">
+                                            </a>
+                                        </td>
+                                        <td class="describe">
+                                            <div class="card">
+                                                <a href="kid_shoes.html" class="header-title fs-5"><span>ស្បែកជើងកូនក្មេង</span></a>
+                                                <span class="mt-2">ព័ណ៍ : ទឹកសមុទ្រ</span>
+                                                <div class="d-md-none col-auto mt-2">
+                                                    <div class="number-input">
+                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                        <input class="quantity form-control" min="0" name="quantity" value="1" type="number">
+                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><p class="d-none d-md-inline-block mb-0">$ 15.00</p></td>
+                                        <td class="text-center">
+                                            <div class="d-none d-md-inline-block">
+                                                <div class="number-input">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                    <input class="quantity form-control" min="0" name="quantity" value="3" type="number">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">$ 45.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="col-3 col-md-2 pro-img">
+                                            <a href="glasses.html" class="card">
+                                                <img src="img/glasses/glasses10.png" alt="">
+                                            </a>
+                                        </td>
+                                        <td class="describe">
+                                            <div class="card">
+                                                <a href="glasses.html" class="header-title fs-5"><span>វែនតា</span></a>
+                                                <span class="mt-2">ព័ណ៍ : ត្នោត</span>
+                                                <div class="d-md-none col-auto mt-2">
+                                                    <div class="number-input">
+                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                        <input class="quantity form-control" min="0" name="quantity" value="1" type="number">
+                                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td><p class="d-none d-md-inline-block mb-0">$ 15.00</p></td>
+                                        <td class="text-center">
+                                            <div class="d-none d-md-inline-block">
+                                                <div class="number-input">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                    <input class="quantity form-control" min="0" name="quantity" value="1" type="number">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">$ 15.00</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr class="fs-5 fw-bolder">
+                                        <td colspan="2" class="border-0">តម្លៃសរុប : </td>
+                                        <td class="border-0"></td>
+                                        <td class="border-0"></td>
+                                        <td class="border-0"></td>
+                                        <td class="text-end border-0">$ 161.87</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#payModal" role="button" data-bs-toggle="modal" class="add-cart px-4">ទិញឥឡូវនេះ</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-lg-5 d-none d-lg-block">
+                            <div class="row">
+                                <img src="img/stylizh-high-resolution-logo-transparent.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="footer-title mt-lg-4 mb-3">អំពីយើង</h3>
+                    <p class="about"><span>Stylizh</span> គឺជា Website មួយដែលអាចអោយអតិថិជនធ្វើការទិញទំនិញផ្សេងៗតាមរយៈ Online បាន​ ។ ដែលនៅលើ website របស់យើងមានជាច្រើនប្រភេទទៅតាមតម្រូវការរបស់អតិថិជន ដោយរួមមាន សម្លៀកបំពាក់ ស្បែកជើង ទាំងបុរស នារី ក៏ដូចជាកូនក្មេង ព្រមទាំងមានគ្រឿង Accessories និង​គ្រឿងសង្ហារិមមួយចំនួនផងដែរ ។ </p>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="footer-title mt-4 mt-lg-0">Quick Link</h3>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li class="list-item"><a href="wonmen_clothes.html" class="list-link">សម្លៀកបំពាក់នារី</a></li>
+                                <li class="list-item"><a href="men_clothes.html" class="list-link">សម្លៀកបំពាក់បុរស</a></li>
+                                <li class="list-item"><a href="kid_clothes.html" class="list-link">សម្លៀកបំពាក់កូនក្មេង</a></li>
+                                <li class="list-item"><a href="women_shoes.html" class="list-link">ស្បែកជើងនារី</a></li>
+                                <li class="list-item"><a href="men_shoes.html" class="list-link">ស្បែកជើងបុរស</a></li>
+                                <li class="list-item"><a href="kid_shoes.html" class="list-link">ស្បែកជើងកូនក្មេង</a></li>
+                                <li class="list-item"><a href="furniture.html" class="list-link">គ្រឿងសង្ហាររិម</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled">
+                                <li class="list-item"><a href="clock.html" class="list-link">នាឡិកា</a></li>
+                                <li class="list-item"><a href="jewelry.html" class="list-link">គ្រឿងអលង្ការ</a></li>
+                                <li class="list-item"><a href="glasses.html" class="list-link">វ៉ែនតា</a></li>
+                                <li class="list-item"><a href="hat.html" class="list-link">មួក</a></li>
+                                <li class="list-item"><a href="bag.html" class="list-link">កាបូប​ & កាតាប</a></li>
+                                <li class="list-item"><a href="promotion.html" class="list-link">បញ្ចុះតម្លៃ</a></li>
+                                <li class="list-item"><a href="popular.html" class="list-link">ពេញនិយម</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                            <h3 class="footer-title mt-4 mt-lg-0">ទំនាក់ទំនង</h3>
+                            <ul class="list-unstyled mt-4">
+                                <li class="list-item"><a target="_blank" class="list-link" href="https://www.facebook.com/ahchi.vylove.5"><i class="fa-brands fa-square-facebook"></i> <span class="ms-2">Facebook</span></a></li>
+                                <li class="list-item"><a target="_blank" class="list-link fs-6" href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i> <span class="ms-2">Instagram</span></a></li>
+                                <li class="list-item"><a target="_blank" class="list-link" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i> <span class="ms-1">Youtube</span></a></li>
+                                <li class="list-item"><a target="_blank" class="list-link" href="https://web.telegram.org/k/"><i class="fa-brands fa-telegram"></i> <span class="ms-2">Telegram</span></a></li>
+                                <li class="list-item"><a target="_blank" class="list-link" href="https://twitter.com/"><i class="fa-brands fa-square-twitter"></i> <span class="ms-2">Twitter</span></a></li>
+                                <li class="list-item"><a target="_blank" class="list-link" href="https://line.me/en/"><i class="fa-brands fa-line"></i> <span class="ms-2">Line</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                            <h3 class="footer-title mt-4 mt-lg-0">Support</h3>
+                            <ul class="list-unstyled mt-4">
+                                <li class="list-item"><p class="support">Feedback</p></li>
+                                <li class="list-item"><p class="support">Security</p></li>
+                                <li class="list-item"><p class="support">FAQ</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <hr size="2" color="#6A704C" class="my-4">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 text-center text-md-start">
+                        <span class="copy">Copyright © 2023 Stylizh All Rights Reserved</span>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 mt-4 mt-md-0">
+                        <div class="list-inline text-center text-md-end">
+                            <span><img src="img/payment/amex.svg" alt=""></span>
+                            <span><img src="img/payment/klarna.svg" alt=""></span>
+                            <span><img src="img/payment/maestro.svg" alt=""></span>
+                            <span><img src="img/payment/mastercard.svg" alt=""></span>
+                            <span><img src="img/payment/paypal.svg" alt=""></span>
+                            <span><img src="img/payment/visa.svg" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <!-- Tooltip -->
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+
+    <script type="text/javascript">
+        var header = document.querySelector(".header-bg")
+        window.onscroll = function() {
+            if ( window.pageYOffset > 30) {
+                header.classList.add('scrolled')
+            } else {
+                header.classList.remove('scrolled')
+            }
+        }
+    </script>
+    <!-- Add to favorite -->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.trigger-toast').each(function (index) {
+                var uniqueIdentifier = 'link_' + index;
+                $(this).data('target', uniqueIdentifier);
+            });
+        });
+
+        $(document).ready(function () {
+            var toastVisibility = {};
+            $('.trigger-toast').on('click', function () {
+                var target = $(this).data('target');
+
+                toastVisibility[target] = !toastVisibility[target];
+
+                if (toastVisibility[target]) {
+                    $('.toast').toast('show');
+                } else {
+                    $('.toast').toast('hide');
+                }
+            });
+        });
+    </script>
+    <script>
+        var toggleLinks = document.getElementsByClassName('trigger-toast');
+        for (var i = 0; i < toggleLinks.length; i++) {
+            toggleLinks[i].addEventListener('click', function(event) {
+                // Toggle the 'clicked' class
+                this.classList.toggle('clicked');
+            });
+        }
+    </script>
+</body>
+</html>
